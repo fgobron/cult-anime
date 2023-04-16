@@ -1,0 +1,66 @@
+/* Réinitialisez les marges et les espacements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Styles pour la balise <body> */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fafafa;
+    background-image: linear-gradient(to bottom, #515151, #2C2C2C);
+    min-height: 100vh;
+  }
+
+  /* Styles pour les titres et les liens */
+  h1, h2 {
+    color: #fff;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* Styles pour l'en-tête */
+  header {
+    padding: 20px;
+  }
+
+  header h1 {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  nav ul {
+    display: inline;
+  }
+
+  nav li {
+    display: inline;
+    margin-right: 10px;
+  }
+
+  /* Styles pour le conteneur de la page */
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* Styles pour le contenu principal */
+  main {
+    padding: 20px;
+    flex-grow: 1;
+  }
+
+
+  /* Styles pour le pied de page */
+  footer {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+    text-align: center;
+  }
