@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Frédéric GOBRON -- Développeur Web -- http://alternetdev.net/
+    Nathalie Moreau -- Contributeur éditorial -- https://www.youtube.com/@nathaliemoreau
+
+# THANKS
+
+    OpenAI ChatGPT
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, Modernizr, Normalize.css, Parcel-bundler

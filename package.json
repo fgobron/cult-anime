@@ -1,0 +1,36 @@
+{
+  "name": "cult-anime",
+  "version": "0.0.1",
+  "description": "Site web pour CULT'ANIME, une entreprise d'animation socio-culturelle proposant des ateliers musicaux, artistiques, de chorale, de multimédia et des projets d'animation pour les personnes en situation d'isolement ou de handicap.",
+  "keywords": [
+    "animation",
+    "socio-culturelle",
+    "ateliers",
+    "musique",
+    "art",
+    "chorale",
+    "multimédia",
+    "handicap",
+    "isolement"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Frédéric GOBRON",
+    "url": "http://alternetdev.net/"
+  },
+  "contributors": [
+    {
+      "name": "Nathalie Moreau",
+      "role": "Contributeur éditorial"
+    }
+  ],
+  "scripts": {
+    "build": "parcel build index.html",
+    "dev": "parcel index.html --open",
+    "start": "npm run build && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
