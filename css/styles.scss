@@ -1,0 +1,69 @@
+@use "colors";
+@use "menu";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.6;
+  background-color: colors.$background;
+  min-height: 100vh;
+  color: colors.$text-base;
+}
+
+a {
+  color: colors.$text-base;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  label {
+    position: fixed;
+    z-index: 1000;
+    padding: 2rem 2rem;
+
+    font-size: 2rem;
+    line-height: 2rem;
+
+    cursor: pointer;
+  }
+}
+
+// Main content
+section {
+  &.content {
+    flex-grow: 1;
+    padding: 2rem 13.5rem;
+    text-align: justify;
+    background-image: linear-gradient(
+      to bottom,
+      colors.$gradient-start,
+      colors.$gradient-end
+    );
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      margin: 0;
+      padding: 0;
+      color: colors.$text-title;
+    }
+
+    img.girl-bag {
+      position: fixed;
+      bottom: 0;
+      right: 2rem;
+      z-index: 10;
+      width: 9rem;
+      height: auto;
+    }
+  }
+}
