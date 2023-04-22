@@ -1,89 +1,22 @@
 @use "colors";
 
-// entypo
-[class*="entypo-"]:before {
-  font-family: "entypo", sans-serif;
-}
-
-#menu__trigger {
-  position: absolute;
-
-  height: 0;
-  width: 0;
-  display: none;
-
-  &:checked {
-    & ~ .menu {
-      nav {
-        a {
-          -webkit-transform: translate3d(0px, 0, 0) rotateY(0deg);
-          transform: translate3d(0px, 0, 0) rotateY(0deg);
-
-          -webkite-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-
-          -webkit-transition: all 0.4s ease-in-out;
-          transition: all 0.4s ease-in-out;
-
-          &:nth-child(2) {
-            -webkit-transition-delay: 0.1s;
-            transition-delay: 0.1s;
-          }
-
-          &:nth-child(3) {
-            -webkit-transition-delay: 0.2s;
-            transition-delay: 0.2s;
-          }
-
-          &:nth-child(4) {
-            -webkit-transition-delay: 0.3s;
-            transition-delay: 0.3s;
-          }
-
-          &:nth-child(5) {
-            -webkit-transition-delay: 0.4s;
-            transition-delay: 0.4s;
-          }
-
-          &:nth-child(6) {
-            -webkit-transition-delay: 0.5s;
-            transition-delay: 0.5s;
-          }
-
-          &:nth-child(7) {
-            -webkit-transition-delay: 0.6s;
-            transition-delay: 0.6s;
-          }
-
-          &:nth-child(8) {
-            -webkit-transition-delay: 0.7s;
-            transition-delay: 0.7s;
-          }
-        }
-      }
-    }
-  }
-}
-
-section {
+aside {
   &.menu {
-    position: fixed;
+    position: absolute;
     z-index: 10;
     top: 0;
     bottom: 0;
     min-height: 100%;
 
     nav {
-      padding-top: 4rem;
-      -webkit-perspective: 20rem;
-      perspective: 20rem;
+      padding-top: 1rem;
       a {
         display: block;
         position: relative;
 
         width: 12rem;
 
-        padding: 1rem 0rem 1rem 1.25rem;
+        padding: 1rem 0 1rem 1rem;
 
         letter-spacing: 1.5px;
         font-weight: 300;
@@ -91,69 +24,29 @@ section {
         text-decoration: none;
         text-transform: uppercase;
         font-weight: bold;
+        color: colors.$text-menu;
 
         &::before {
           content: "";
           position: absolute;
           bottom: 0;
           left: 0;
-          height: 2px; // Épaisseur de la barre de soulignement
+          height: 2px;
           width: 0;
-          background-color: colors.$text-title; // Couleur de la barre de soulignement
-          transition: width 0.3s ease-in-out; // Durée et type d'animation
+          background-color: colors.$text-title;
+          transition: width 0.3s ease-in-out;
         }
 
-        &:hover {
+        &:hover,
+        &.active {
+          color: colors.$text-highlight;
           &::before {
-            width: 100%; // Agrandir le soulignement pour couvrir toute la largeur du lien lors du survol
+            width: 100%;
           }
         }
 
-        -webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg);
-        transform: translate3d(-100%, 0, 0) rotateY(90deg);
-
-        -webkit-transform-origin: 0% 50%;
-        transform-origin: 0% 50%;
-
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-
-        -webkit-transition: all 0.25s ease-in-out;
-        transition: all 0.25s ease-in-out;
-
         &:nth-child(1) {
-          -webkit-transition-delay: 0.235s;
-          transition-delay: 0.235s;
-        }
-
-        &:nth-child(2) {
-          -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-        }
-
-        &:nth-child(3) {
-          -webkit-transition-delay: 0.165s;
-          transition-delay: 0.165s;
-        }
-
-        &:nth-child(4) {
-          -webkit-transition-delay: 0.13s;
-          transition-delay: 0.13s;
-        }
-
-        &:nth-child(5) {
-          -webkit-transition-delay: 0.095s;
-          transition-delay: 0.095s;
-        }
-
-        &:nth-child(6) {
-          -webkit-transition-delay: 0.06s;
-          transition-delay: 0.06s;
-        }
-
-        &:nth-child(7) {
-          -webkit-transition-delay: 0.25s;
-          transition-delay: 0.025s;
+          padding-top: 0;
         }
       }
     }

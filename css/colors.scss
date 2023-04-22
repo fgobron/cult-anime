@@ -1,9 +1,8 @@
 // Colors pallet
 $very-dark-gray: #515151;
 $mostly-black: #2c2c2c;
-$gray: #a6a6a6;
 $strong-pink: #b4186e;
-$soft-pink: #ee81bd;
+$soft-gray: #a6a6a6;
 $soft-blue: #497fdf;
 $soft-magenta: #df82e2;
 
@@ -11,6 +10,7 @@ $soft-magenta: #df82e2;
 $background: $very-dark-gray;
 $gradient-start: $very-dark-gray;
 $gradient-end: $mostly-black;
-$text-base: $gray;
+$text-menu: $soft-gray;
+$text-base: $soft-gray;
 $text-title: $strong-pink;
 $text-highlight: $strong-pink;
