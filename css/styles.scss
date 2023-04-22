@@ -10,32 +10,25 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.6;
-  background-color: colors.$background;
   color: colors.$text-base;
-}
-
-a {
-  color: colors.$text-base;
-}
-
-// Structure
-main {
   background-image: linear-gradient(
     to bottom,
     colors.$gradient-start,
     colors.$gradient-end
   );
-
-  .container {
-    position: relative;
-    max-width: 1024px;
-    margin: 0 auto;
-    min-height: 100vh;
-    overflow: hidden;
-  }
+  min-height: 100vh;
 }
 
-// Content
+a {
+  color: colors.$text-link;
+}
+
+main {
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 section {
   span.highlight {
     background-color: colors.$text-highlight;
@@ -46,6 +39,7 @@ section {
     font-weight: bold;
   }
   &.content {
+    position: relative;
     padding: 1rem 13.5rem;
     text-align: justify;
 
@@ -72,5 +66,36 @@ section {
       width: 9rem;
       height: auto;
     }
+  }
+
+  .bar-1,
+  .bar-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    background-image: linear-gradient(to bottom, #e753af, #604f91);
+    opacity: 0.6;
+  }
+
+  .bar-1 {
+    height: 100%;
+  }
+
+  .bar-2 {
+    height: calc(100% - 60px);
+    top: 60px;
+    width: 100px;
+  }
+}
+
+footer {
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto;
+  border-top: 1px solid colors.$soft-gray;
+  p {
+    text-align: center;
+    font-size: 0.8rem;
   }
 }
