@@ -5,7 +5,7 @@
   font-family: "entypo", sans-serif;
 }
 
-input[type="checkbox"] {
+#menu__trigger {
   position: absolute;
 
   height: 0;
@@ -79,17 +79,35 @@ section {
       perspective: 20rem;
       a {
         display: block;
+        position: relative;
 
         width: 12rem;
 
-        padding: 1.25rem 0rem 1.25rem 1.75rem;
+        padding: 1rem 0rem 1rem 1.25rem;
 
         letter-spacing: 1.5px;
         font-weight: 300;
-        font-size: 1.25rem;
+        font-size: 1rem;
         text-decoration: none;
         text-transform: uppercase;
         font-weight: bold;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 2px; // Épaisseur de la barre de soulignement
+          width: 0;
+          background-color: colors.$text-title; // Couleur de la barre de soulignement
+          transition: width 0.3s ease-in-out; // Durée et type d'animation
+        }
+
+        &:hover {
+          &::before {
+            width: 100%; // Agrandir le soulignement pour couvrir toute la largeur du lien lors du survol
+          }
+        }
 
         -webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg);
         transform: translate3d(-100%, 0, 0) rotateY(90deg);
