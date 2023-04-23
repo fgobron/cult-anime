@@ -31,12 +31,21 @@ main {
 
 section {
   span.highlight {
-    background-color: colors.$text-highlight;
     color: colors.$background;
     padding: 0.4rem 0;
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
+
+    &.pink {
+      background-color: colors.$text-highlight-pink;
+    }
+    &.blue {
+      background-color: colors.$text-highlight-blue;
+    }
+    &.magenta {
+      background-color: colors.$text-highlight-magenta;
+    }
   }
   &.content {
     position: relative;
@@ -63,6 +72,41 @@ section {
       bottom: 0;
       right: 0;
       z-index: 10;
+      width: 9rem;
+      height: auto;
+    }
+
+    .bar-1,
+    .bar-2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50px;
+      background-image: linear-gradient(to bottom, #e753af, #604f91);
+      opacity: 0.6;
+    }
+
+    .bar-1 {
+      height: 100%;
+    }
+
+    .bar-2 {
+      height: calc(100% - 60px);
+      top: 60px;
+      width: 100px;
+    }
+  }
+}
+
+aside {
+  &.illustration {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+
+    height: auto;
+    img.girl-bag {
       width: 9rem;
       height: auto;
     }
