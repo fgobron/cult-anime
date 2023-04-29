@@ -1,0 +1,34 @@
+article {
+  margin-bottom: 40px;
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .img-wrapper {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .image-strip {
+    background-size: 1000% 100%;
+    width: 48px;
+    height: 270px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    margin-left: 16px;
+    flex-shrink: 0;
+  }
+
+  .img-wrapper:hover .image-strip {
+    margin-left: 0;
+  }
+}
