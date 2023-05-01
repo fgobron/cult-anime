@@ -25,9 +25,11 @@ a {
 }
 
 main {
+  display: flex;
   position: relative;
   max-width: 1024px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 section {
@@ -48,10 +50,17 @@ section {
       background-color: colors.$text-highlight-magenta;
     }
   }
+
+  &.menu {
+    position: sticky;
+    top: 2px;
+    width: 13rem;
+    align-self: flex-start;
+  }
+
   &.content {
-    position: relative;
-    padding: 1rem 10.38rem 1rem 13.63rem;
-    text-align: justify;
+    padding: 1em 8em 1em 1em;
+    flex-grow: 1;
     min-height: 80vh;
 
     h1 {
@@ -66,6 +75,7 @@ section {
     }
 
     p {
+      text-align: justify;
       margin-bottom: 1rem;
     }
 
