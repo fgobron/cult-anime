@@ -1,6 +1,29 @@
+@use "fonts";
+@use "colors";
+
 main {
   background-image: url("../img/biographie/biographie.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.contact-links {
+  position: absolute;
+  right: calc(1 / 5 * 100%);
+  top: 40%;
+  transform: translateY(-40%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 }
