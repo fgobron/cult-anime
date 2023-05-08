@@ -4,6 +4,7 @@ import chibiImage from "../img/art/chibi.jpg";
 import irisFoldingImage from "../img/art/iris-folding.jpg";
 import gravureSurPolystyreneImage from "../img/art/gravure-sur-polystyrene.jpg";
 import pouringImage from "../img/art/pouring.jpg";
+import acryliqueImage from "../img/art/atelier-acrylique.jpg";
 
 // Multimedia
 import clipImage from "../img/multimedia/clip-video.jpg";
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     iris: irisFoldingImage,
     gravure: gravureSurPolystyreneImage,
     pouring: pouringImage,
+    acrylique: acryliqueImage,
     clipvideo: clipImage,
     interview: interviewImage,
     stopmotion: stopmotionImage,

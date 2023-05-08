@@ -49,4 +49,22 @@ article {
   .img-wrapper:hover .image-strip {
     margin-left: 0;
   }
+
+  .image-first {
+    margin-top: 0.2rem;
+  }
+
+  .image-left {
+    float: left;
+    margin: 0.2rem 1rem 0.2rem 0;
+    width: 260px;
+    height: auto;
+  }
+
+  .image-right {
+    float: right;
+    margin: 0.2rem 0 0.2rem 1rem;
+    width: 260px;
+    height: auto;
+  }
 }
