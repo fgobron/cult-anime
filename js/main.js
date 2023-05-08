@@ -1,3 +1,2 @@
 (function() {
-  // Your code here...
 }());
