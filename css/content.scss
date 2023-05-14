@@ -67,4 +67,25 @@ article {
     width: 260px;
     height: auto;
   }
+
+  &.special-entreprise {
+    h3 {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1.2em;
+    }
+    .video-stamp {
+      position: relative;
+      img {
+        position: absolute;
+        top: -4rem;
+        left: -3rem;
+        transform: rotate(-35deg);
+        width: 150px;
+        height: 150px;
+      }
+      iframe {
+        margin-top: 5rem;
+      }
+    }
+  }
 }
