@@ -34,5 +34,8 @@
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "sass": "^1.62.0"
+  },
+  "dependencies": {
+    "sakura-js": "^1.1.1"
   }
 }
