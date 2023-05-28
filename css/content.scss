@@ -68,7 +68,8 @@ article {
     height: auto;
   }
 
-  &.special-entreprise {
+  &.special-entreprise,
+  &.special-nouveauté {
     h3 {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       font-size: 1.2em;
