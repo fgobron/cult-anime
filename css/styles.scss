@@ -58,7 +58,7 @@ section {
   }
 
   &.content {
-    padding: 1em 8em 1em 1em;
+    padding: 1em;
     flex-grow: 1;
     min-height: 80vh;
 
@@ -77,71 +77,6 @@ section {
       text-align: justify;
       margin-bottom: 1rem;
     }
-
-    /* Illustration */
-    img.girl-bag {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: 10;
-      width: 9rem;
-      height: auto;
-    }
-
-    .bar-1,
-    .bar-2 {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 50px;
-      background-image: linear-gradient(to bottom, #e753af, #604f91);
-      opacity: 0.6;
-    }
-
-    .bar-1 {
-      height: 100%;
-    }
-
-    .bar-2 {
-      height: calc(100% - 60px);
-      top: 60px;
-      width: 100px;
-    }
-  }
-}
-
-aside {
-  &.illustration {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 10;
-
-    height: auto;
-    img.girl-bag {
-      width: 9rem;
-      height: auto;
-    }
-  }
-
-  .bar-1,
-  .bar-2 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50px;
-    background-image: linear-gradient(to bottom, #e753af, #604f91);
-    opacity: 0.6;
-  }
-
-  .bar-1 {
-    height: 100%;
-  }
-
-  .bar-2 {
-    height: calc(100% - 60px);
-    top: 60px;
-    width: 100px;
   }
 }
 
