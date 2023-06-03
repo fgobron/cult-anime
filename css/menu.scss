@@ -2,6 +2,10 @@
 
 section {
   &.menu {
+    @media (max-width: 768px) {
+      // Breakpoint for mobile devices
+      display: none;
+    }
     nav {
       padding-top: 1rem;
       a {
