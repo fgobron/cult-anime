@@ -63,14 +63,19 @@ section {
     min-height: 80vh;
 
     h1 {
-      margin: 0;
-      padding: 0;
-    }
+      img.logo {
+        float: left;
+        max-width: 100%;
+        width: 200px;
+        margin-right: 1rem;
 
-    img.logo {
-      float: left;
-      width: 200px;
-      margin-right: 1rem;
+        @media (max-width: 768px) {
+          float: none;
+          display: block;
+          margin: 0 auto;
+          width: 35%;
+        }
+      }
     }
 
     p {
