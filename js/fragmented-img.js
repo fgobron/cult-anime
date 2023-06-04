@@ -26,14 +26,31 @@ document.addEventListener("DOMContentLoaded", function () {
     tutoriel: tutorielImage,
   };
 
+  function calculateStripPosition(index) {
+    const width = window.innerWidth;
+    let stripWidth;
+
+    if (width <= 400) {
+      stripWidth = 240;
+    } else if (width <= 600) {
+      stripWidth = 320;
+    } else {
+      stripWidth = 480;
+    }
+
+    return (stripWidth / 10) * index;
+  }
+
   document.querySelectorAll(".img-wrapper").forEach((container) => {
     const imageName = container.dataset.image;
     const imageUrl = images[imageName];
+
     container.querySelectorAll(".image-strip").forEach((strip, index) => {
-      const stripPosition = (480 / 10) * index;
+      const stripPosition = calculateStripPosition(index);
       strip.style.backgroundImage = `url('${imageUrl}')`;
       strip.style.backgroundPosition = `-${stripPosition}px 0`;
     });
   });
+
 });
 

@@ -44,10 +44,42 @@ article {
     cursor: pointer;
     margin-left: 16px;
     flex-shrink: 0;
+
+    @media screen and (max-width: 600px) {
+      width: 32px;
+      height: 180px;
+      margin-left: 12px;
+    }
+
+    @media screen and (max-width: 400px) {
+      width: 24px;
+      height: 135px;
+      margin-left: 6px;
+    }
   }
 
   .img-wrapper:hover .image-strip {
     margin-left: 0;
+  }
+
+  .img-responsive-wrapper {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .img-responsive-wrapper .img-wrapper {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  @media screen and (max-width: 600px) {
+    .img-responsive-wrapper {
+      height: auto;
+    }
   }
 
   .image-first {
