@@ -131,16 +131,24 @@ article {
     }
     .video-stamp {
       position: relative;
+      .responsive-video {
+        margin-top: 50px;
+        @media screen and (max-width: 768px) {
+          margin-top: 20px;
+        }
+      }
       img {
         position: absolute;
-        top: -4rem;
-        left: -3rem;
+        top: -40px;
+        left: -50px;
         transform: rotate(-35deg);
-        width: 150px;
-        height: 150px;
-      }
-      iframe {
-        margin-top: 5rem;
+        width: 20%;
+        height: auto;
+
+        @media screen and (max-width: 768px) {
+          top: -10px;
+          left: -10px;
+        }
       }
     }
   }
