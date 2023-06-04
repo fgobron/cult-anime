@@ -85,6 +85,13 @@ article {
     margin: 0.2rem 1rem 0.2rem 0;
     width: 260px;
     height: auto;
+
+    @media screen and (max-width: 600px) {
+      float: none;
+      margin: 0.2rem auto;
+      width: 100%;
+      max-width: 260px;
+    }
   }
 
   .image-right {
@@ -92,6 +99,13 @@ article {
     margin: 0.2rem 0 0.2rem 1rem;
     width: 260px;
     height: auto;
+
+    @media screen and (max-width: 600px) {
+      float: none;
+      margin: 0.2rem auto;
+      width: 100%;
+      max-width: 260px;
+    }
   }
 
   .responsive-video {
