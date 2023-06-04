@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
       stripWidth = 240;
     } else if (width <= 600) {
       stripWidth = 320;
+    } else if (width <= 820) {
+      stripWidth = 400;
     } else {
       stripWidth = 480;
     }
@@ -52,5 +54,78 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-});
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function () {
+      var context = this,
+        args = arguments;
+      var later = function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  }
 
+  var optimizedScrollHandler = debounce(function () {
+    var imgWrappers = document.querySelectorAll(".img-wrapper");
+    var lastImgWrapper = imgWrappers[imgWrappers.length - 1];
+
+    imgWrappers.forEach((container) => {
+      var rect = container.getBoundingClientRect();
+
+      // Check if the image is within 200px from the top
+      if (rect.top <= 200 && rect.top >= 0) {
+        container.querySelectorAll(".image-strip").forEach((strip) => {
+          strip.style.marginLeft = "0";
+        });
+      } else {
+        container.querySelectorAll(".image-strip").forEach((strip) => {
+          strip.style.marginLeft = "";
+        });
+      }
+    });
+
+    // Check the last image position and if the user has scrolled to the bottom
+    checkForEffectTrigger(lastImgWrapper);
+  }, 100);
+
+  function checkForEffectTrigger(lastImgWrapper) {
+    var rect = lastImgWrapper.getBoundingClientRect();
+
+    // Apply effect to the last image if it's within 200px from the top
+    if (rect.top <= 200 && rect.top >= 0) {
+      applyEffect(lastImgWrapper);
+      return;
+    }
+
+    // Apply effect to the last image if the user has scrolled to the bottom
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      applyEffect(lastImgWrapper);
+      return;
+    }
+
+    // Remove effect otherwise
+    removeEffect(lastImgWrapper);
+  }
+
+  function applyEffect(imgWrapper) {
+    imgWrapper.querySelectorAll(".image-strip").forEach((strip) => {
+      strip.style.marginLeft = "0";
+    });
+  }
+
+  function removeEffect(imgWrapper) {
+    imgWrapper.querySelectorAll(".image-strip").forEach((strip) => {
+      strip.style.marginLeft = "";
+    });
+  }
+
+  // This condition will check if the viewport is less or equal to 768px
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    window.addEventListener("scroll", optimizedScrollHandler);
+  }
+});
