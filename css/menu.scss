@@ -1,11 +1,49 @@
 @use "colors";
 
+.menu-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  right: 20px;
+  top: 15px;
+  z-index: 2;
+  cursor: pointer;
+
+  span {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: colors.$strong-pink;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
+
+#navbar {
+  display: none; // Hide the navbar on small screens by default
+  position: sticky;
+  width: 0;
+
+  @media (min-width: 769px) {
+    display: block; // Show the navbar on larger screens
+    top: 2px;
+    width: 13rem;
+    align-self: flex-start;
+  }
+
+  &.active {
+    // This class will be added/removed using JS
+    transform: translateX(0%);
+  }
+}
+
 section {
   &.menu {
-    @media (max-width: 768px) {
-      // Breakpoint for mobile devices
-      display: none;
-    }
     nav {
       padding-top: 1rem;
       a {

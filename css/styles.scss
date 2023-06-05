@@ -55,13 +55,6 @@ section {
     }
   }
 
-  &.menu {
-    position: sticky;
-    top: 2px;
-    width: 13rem;
-    align-self: flex-start;
-  }
-
   &.content {
     padding: 1em;
     flex-grow: 1;
