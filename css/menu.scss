@@ -9,7 +9,7 @@
   position: fixed;
   right: 20px;
   top: 15px;
-  z-index: 2;
+  z-index: 999;
   cursor: pointer;
 
   span {
@@ -25,27 +25,32 @@
 }
 
 #navbar {
-  display: none; // Hide the navbar on small screens by default
-  position: sticky;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 0;
+  height: 100vh;
+  overflow: auto;
+  transition: width 0.3s ease-in-out;
+  z-index: 800;
+  background-color: #fff; // Change this color as needed
 
   @media (min-width: 769px) {
-    display: block; // Show the navbar on larger screens
-    top: 2px;
+    position: sticky;
     width: 13rem;
-    align-self: flex-start;
+    height: auto;
+    background-color: transparent;
   }
 
   &.active {
-    // This class will be added/removed using JS
-    transform: translateX(0%);
+    width: 100%;
   }
 }
 
 section {
   &.menu {
     nav {
-      padding-top: 1rem;
+      padding-top: 2rem;
       a {
         position: relative;
         display: block;
@@ -69,6 +74,9 @@ section {
           width: 0;
           background-color: colors.$text-title;
           transition: width 0.3s ease-in-out;
+          @media (max-width: 768px) {
+            transition: none;
+          }
         }
 
         &:hover,
@@ -76,6 +84,9 @@ section {
           color: colors.$text-highlight-pink;
           &::before {
             width: 100%;
+            @media (max-width: 768px) {
+              width: 100%;
+            }
           }
         }
 
